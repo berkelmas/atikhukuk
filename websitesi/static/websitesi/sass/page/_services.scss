@@ -1,0 +1,201 @@
+/*--------------------------------------------------------------
+	#services page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#7.1	service-pg-service-section
+--------------------------------------------------------------*/
+.service-pg-service-section {
+	padding-bottom: 70px;
+
+	@include media-query(991px) {
+		padding-bottom: 60px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 50px;
+	}
+
+	.service-grids {
+		margin: 0 -15px;
+
+		.grid {
+			width: 33.33%;
+			float: left;
+			padding: 0 15px 30px;
+
+			@include media-query(1199px) {
+				width: 50%;
+			}
+
+			@include media-query(600px) {
+				width: 100%;
+				float: none;
+			}
+		}
+	}
+
+	.grid h3 {
+		font-size: 25px;
+		font-size: calc-rem-value(25);
+		line-height: 1.3em;
+		margin: 0 0 0.4em;
+
+		@include media-query(991px) {
+			font-size: 22px;
+			font-size: calc-rem-value(22);
+		}
+	}
+
+	.grid h3 a {
+		color: $heading-color;
+	}
+
+	.grid h3 a:hover {
+		color: $theme-primary-color;
+	}
+
+	.grid .details {
+		background-color: $white;
+		padding: 32px 30px 35px;
+		box-shadow: 0px 2px 38px 4px rgba(0, 0, 0, 0.06);
+
+		@include media-query(991px) {
+			padding: 25px 20px;
+		}
+	}
+
+	.grid p {
+		font-size: 17px;
+		font-size: calc-rem-value(17);
+		margin: 0 0 1em;
+	}
+
+	.grid .read-more {
+		color: $theme-primary-color;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		&:hover {
+			color: darken($theme-primary-color, 20%);
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#7.2	pricing-section
+--------------------------------------------------------------*/
+.pricing-section {
+	background-color: #f8f8f8;
+	padding-bottom: 70px;
+
+	@include media-query(991px) {
+		padding-bottom: 60px;
+	}
+
+	@include media-query(767px) {
+		padding-bottom: 50px;
+	}
+
+	.pricing-grids {
+		margin: 0 -15px;
+
+		.grid {
+			width: 33.33%;
+			float: left;
+			padding: 0 15px 30px;
+			text-align: center;
+
+			@include media-query(991px) {
+				width: 50%;
+			}
+
+			@include media-query(767px) {
+				width: 100%;
+				float: none;
+			}
+		}
+	}
+
+	.pricing-header {
+		background-color: #2b2b2b;
+		padding: 55px 25px 40px;
+
+		@include media-query(991px) {
+			padding: 45px 15px 30px;
+		}
+
+		.circuler-price {
+			background-color: $white;
+			width: 130px;
+			height: 130px;
+			display: table;
+			border-radius: 50%;
+			margin: 0 auto 20px;
+			border: 5px solid rgba(214,214,214, 0.8);
+			box-shadow: 0 0 0 5px rgba(214,214,214, 0.5);
+
+			@include media-query(991px) {
+				width: 110px;
+				height: 110px;
+			}
+		}
+
+		h2 {
+			font-family: $base-font;
+			font-size: 40px;
+			font-size: calc-rem-value(40);
+			font-weight: bold;
+			margin: 0;
+			display: table-cell;
+			vertical-align: middle;
+
+			@include media-query(991px) {
+				font-size: 30px;
+				font-size: calc-rem-value(30);
+			}
+
+			sup {
+				font-size: 20px;
+				font-size: calc-rem-value(20);
+
+				@include media-query(991px) {
+					font-size: 15px;
+					font-size: calc-rem-value(15);
+				}
+			}
+		}
+
+		p {
+			font-weight: normal;
+			color: #fff;
+			margin: 0;
+		}
+	}
+
+	.pricing-body {
+		background-color: $white;
+		padding: 40px 50px 50px;
+
+		@include media-query(1199px) {
+			padding: 40px 20px 50px;
+		}
+
+		h3 {
+			font-size: 28px;
+			font-size: calc-rem-value(28);
+			margin: 0 0 1em;
+
+			@include media-query(1199px) {
+				font-size: 25px;
+				font-size: calc-rem-value(25);
+			}
+		}
+
+		p {
+			line-height: 2em;
+			margin-bottom: 2em;
+			color: #8a8888;
+		}
+	}
+}

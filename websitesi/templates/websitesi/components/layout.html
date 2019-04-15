@@ -1,0 +1,245 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block titleMeta %}
+
+
+    {% endblock %}
+
+{% block styles %}
+    <!-- Icon fonts -->
+    <link href="{% static 'websitesi/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'websitesi/css/flaticon.css' %}" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'websitesi/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Plugins for this template -->
+    <link href="{% static 'websitesi/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'websitesi/css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'websitesi/css/owl.theme.css' %}" rel="stylesheet">
+    <link href="{% static 'websitesi/css/slick.css' %}" rel="stylesheet">
+    <link href="{% static 'websitesi/css/slick-theme.css' %}" rel="stylesheet">
+    <link href="{% static 'websitesi/css/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'websitesi/css/jquery.fancybox.css' %}" rel="stylesheet">
+{% endblock %}
+    <!-- Custom styles for this template -->
+    <link href="{% static 'websitesi/css/style.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+
+        <!-- start page-loader -->
+        <div class="page-loader">
+            <div class="page-loader-inner">
+                <div class="inner"></div>
+            </div>
+        </div>
+        <!-- end page-loader -->
+
+
+        <!-- Start header -->
+        <header id="header" class="site-header header-style-3">
+            <div style="padding: 10px;" class="topbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-sm-4">
+                            <div class="site-logo">
+                                <a href="{% url 'anasayfa' %}"><img height="80" src="{% static 'websitesi/images/atik-hukuk-logo-uzun.png' %}" alt="Atik Hukuk Logo"></a>
+                            </div>
+                        </div>
+                        <div class="col col-sm-8">
+                            <div class="info">
+
+                                <div>
+                                    <span style="text-transform: lowercase">info@atikhukuk.com</span>
+                                    <p><a style="color: inherit; text-decoration: none" href="tel:+903123416000">0 (312) 341 60 00</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </div> <!-- end topbar -->
+
+            <nav class="navigation navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="open-btn">
+                            <span class="sr-only">Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar" class="navbar-collapse navbar-left collapse navigation-holder">
+                        <button class="close-navbar"><i class="fa fa-close"></i></button>
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="{% url 'anasayfa' %}">Ana Sayfa</a>
+
+                            </li>
+                            <li><a href="{% url 'hakkimizda' %}">Hakkımızda</a></li>
+                            <li class="menu-item-has-children">
+                                <a href="{% url 'uzmanliklar' %}">Uzmanlık Alanlarımız</a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></li>
+                                    <li><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+                                    <li><a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></li>
+                                    <li><a href="{% url 'icrahukuku' %}">İcra ve İflas Hukuku</a></li>
+                                    <li><a href="{% url 'ishukuku' %}">İş ve Sosyal Güvenlik Hukuku</a></li>
+                                    <li><a href="{% url 'sigortahukuku' %}">Sigorta Hukuku</a></li>
+                                    <li><a href="{% url 'sozlesmelerhukuku' %}">Sözleşmeler Hukuku</a></li>
+                                    <li><a href="{% url 'saglikhukuku' %}">Sağlık Hukuku</a></li>
+                                    <li><a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="{% url 'makaleler' %}">Hukuki Yayınlar</a>
+
+                            </li>
+
+
+
+                            <li>
+                                <a href="{% url 'iletisim' %}">İletişim</a>
+
+                            </li>
+
+                        </ul>
+                    </div><!-- end of nav-collapse -->
+
+                </div><!-- end of container -->
+            </nav>
+        </header>
+        <!-- end of header -->
+
+        {% block body %}
+
+        {% endblock %}
+
+
+
+
+
+
+                <!-- start social-newsletter-section -->
+        <section class="social-newsletter-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="social-holder">
+                            <div><a href="#"><i class="fa fa-facebook"></i> <span>Facebook</span></a></div>
+                            <div><a href="#"><i class="fa fa-twitter"></i> <span>Twitter</span></a></div>
+                            <div><a href="#"><i class="fa fa-instagram"></i> <span>Instagram</span></a></div>
+                            <div><a href="#"><i class="fa fa-linkedin"></i> <span>linkedin</span></a></div>
+                            <div><a href="#"><i class="fa fa-pinterest"></i> <span>Pinterest</span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end social-newsletter-section -->
+
+
+        <!-- start site-footer -->
+        <footer class="site-footer">
+            <div class="upper-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-5 col-md-3 col-sm-6">
+                            <div class="widget about-widget">
+                                <div class="logo widget-title">
+                                    <img height="80" src="{% static 'websitesi/images/atik-hukuk-danismanlik-logo.png' %}" alt="Atik Hukuk Beyaz Logo">
+                                </div>
+                                <p>Atik Hukuk, Avukat Yetkin Atik tarafından Ankara ilinde kurulmuş ve tüm Türkiye genelinde tüzel ve gerçek kişilere hukuk alanında hizmet veren bir hukuk bürosudur.</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget link-widget">
+                                <div class="widget-title">
+                                    <h3>Uzmanlık Alanlarımız</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></li>
+                                    <li><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+                                    <li><a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></li>
+                                    <li><a href="{% url 'icrahukuku' %}">İcra ve İflas Hukuku</a></li>
+                                    <li><a href="{% url 'ishukuku' %}">İş ve Sosyal Güvenlik Hukuku</a></li>
+                                    <li><a href="{% url 'sigortahukuku' %}">Sigorta Hukuku</a></li>
+                                    <li><a href="{% url 'sozlesmelerhukuku' %}">Sözleşmeler Hukuku</a></li>
+                                    <li><a href="{% url 'saglikhukuku' %}">Sağlık Hukuku</a></li>
+                                    <li><a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-3 col-sm-6">
+                            <div class="widget recent-post-widget">
+                                <div class="widget-title">
+                                    <h3>Son Hukuki Yayınlar</h3>
+                                </div>
+                                <div class="posts">
+
+                                    {% for makale in ucmakale %}
+                                    <div class="post">
+                                        <h4><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></h4>
+                                        <p class="date"><i class="fa fa-calendar-o"></i>&nbsp; {{ makale.makale_yayintarihi }}</p>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> <!-- end container -->
+            </div>
+            <div class="lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="separator"></div>
+                        <div class="col col-xs-12">
+                            <p class="copyright">Atik Hukuk Bürosu &copy; 2019. Tüm Hakları Saklıdır.</p>
+                            <ul>
+
+                                <li><a href="{% url 'uzmanliklar' %}">Uzmanlıklar</a></li>
+                                <li><a href="{% url 'makaleler' %}">Hukuki Yayınlar</a></li>
+                                <li><a href="{% url 'iletisim' %}">Bize Ulaşın</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end site-footer -->
+    </div>
+    <!-- end of page-wrapper -->
+
+
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="{% static 'websitesi/js/jquery.min.js' %}"></script>
+    <script src="{% static 'websitesi/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins for this template -->
+    <script src="{% static 'websitesi/js/jquery-plugin-collection.js' %}"></script>
+
+    <!-- Custom script for this template -->
+    <script src="{% static 'websitesi/js/script.js' %}"></script>
+</body>
+</html>

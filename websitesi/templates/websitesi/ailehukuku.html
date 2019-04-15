@@ -1,0 +1,114 @@
+{% extends 'websitesi/components/layout.html' %}
+{% load static %}
+
+{% block titleMeta %}
+
+    <title>Atik Hukuk - Aile Hukuku</title>
+    <meta name="description" content="Avukat Yetkin Atik tarafından Ankara merkezli Hukuk Bürosunda Aile Hukuku alanında evlenme,boşanma,nişanlanma ve soybağı davaları itina ile yürütülmektedir.">
+
+{% endblock %}
+
+
+{% block body %}
+
+            <!-- start page-title -->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="title">
+                            <h2>Aile Hukuku</h2>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'anasayfa' %}">Ana Sayfa</a></li>
+                    <li><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+                </ol>
+            </div> <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start service-single-section -->
+        <section class="service-single-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-8 col-md-push-4">
+                        <div class="service-single-content">
+                            <div class="service-pic">
+                                <img src="{% static 'websitesi/images/Atik-Hukuk-Boşanma-Avukati.png' %}" alt="Atik Hukuk Aile Hukuku Avukatı">
+                            </div>
+                            <h2>Aile Hukuku</h2>
+                            <p>Aile Hukuku, aileler ile bağlantılı konularla ilgilenen, medeni kanun kapsamında karşımıza çıkan bir hukuk dalıdır. Atik Hukuk Bürosu olarak hizmet verdiğimiz süreç içerisinde aile hukuku kapsamında karşımıza çıkan başlıca konular ise; nişanlanma, evlenme ve evlenmenin koşulları & hükümleri, boşanma, boşanma davaları ve boşanmanın doğurduğu sonuçlar, mal rejimleri, aile konutu, soybağı, evlat edinme, velayet, çocuğun talep edebileceği nafaka hakkı, vesayet, kayyımlık, yasal danışmanlık ve yardım nafakasıdır.</p>
+                            <p>Aile Hukuku kapsamında karşımıza çıkan, Türk Medeni Kanunu ve bazı özel yasalarda düzenlenmiş olan konulara ilişkin tüm uyuşmazlıklar Aile Mahkemelerinde görülmektedir. Aile Mahkemeleri, uzmanlık mahkemeleri kapsamında değerlendirilen ve sosyal çalışmacı, ruhbilimci gibi alanlarda hizmet veren kişi ve kişilerin yardımlarına başvurulan mahkemelerdir. Aile Mahkemesi’nde görev alan yargıçların belirlenme süreci ilgili kişinin bu alanda ne kadar uzman olduğu, evli olup olmadığı ve çocuğu olup olmadığı gibi birçok detaya dikkat edilerek seçilir. Yetkin Atik ve diğer Atik Hukuk Danışmanlık çalışanları bu konularda gereken eğitimi almış ve sizlere ihtiyaç duyduğunuz bilgileri sunmak için hizmet vermekte.</p>
+                            <p>Ülkemiz içerisinde birçok aile halen kına, kız isteme ve nişan gibi birçok örf, adet ve gelenekleri sürdürmektedir. Birçok genç çiftin evlilik yolunda atmış olduğu ilk adımlardan birisi olan nişanlanma ardından ayrıldığı görülebilmektedir. Nişanlanma esnasında çiftlerin aileleri gelin veyahut damadın ailesine bazı hediyeler, altın ya da değerli taşlar sunmaktadır. Fakat çiftlerin nişanı bozmalarıyla birlikte aileler arasında bu süreçte karşılıklı olarak sunulan hediyelerden kaynaklı doğan zararların tazmini maalesef ki söz konusu değildir.</p>
+
+                            <h3>Aile Hukuku Nedir ?</h3>
+
+                            <p>Aile Hukuku, medeni kanun kapsamında aileyle bağlantılı tüm konuların içerisinde yer aldığı oldukça geniş kapsamlı bir hukuk dalıdır. Atik Hukuk Bürosu olarak Aile Hukuku kapsamını daha iyi anlayabilmeniz için bugüne kadar hizmet verdiğimiz ve aile hukuku kapsamında karşılaşabileceğiniz bazı durumlar hakkında örnekler paylaşmak istedik;</p>
+
+                            <ol>
+                                <li style="font-family: 'Helvetica';">Boşanma ve Soybağı davaları aile hukuku kapsamında görülmektedir,</li>
+                                <li style="font-family: 'Helvetica';">Karşılıklı anlaşma çerçevesinde gerçekleşecek boşanmalarda protokolün düzenlenme ve yürütülme işlemi,</li>
+                                <li style="font-family: 'Helvetica';">Çekişmeli geçen bir boşanma davasında maddi ve manevi anlamda tazminat talepleri,</li>
+                                <li style="font-family: 'Helvetica';">Velayet ve nafaka konusunda verilmiş hükümlere aykırı hareketler sergilenmesi halinde başvurulabilecek hukuki önlemler ve çözümler,</li>
+                                <li style="font-family: 'Helvetica';">Aile içerisinde yaşanan şiddetle ilgili tedbir kararının alınması,</li>
+                                <li style="font-family: 'Helvetica';">Evlat edinme nedeniyle oluşabilecek tüm uyuşmazlıkların çözülmesi,</li>
+                                <li style="font-family: 'Helvetica';">Evlenecek kişiler arasında yapılacak mal varlığı sözleşmesinin oluşturulması için danışmanlık hizmeti.</li>
+
+                            </ol>
+                            <br>
+
+                            <p>Aile Hukuku, oldukça geniş kapsamlı hukuk dallarından birisidir. Bu sebeple dava sürecinizde size eşlik edecek avukatınızı belirlerken bu alanda tecrübe ve deneyimlerini göz önünde bulundurmanız etkili bir dava süreci geçirmenizi sağlayacaktır. Atik hukuk danışmanlık etkili bir dava süreci geçirebilmeniz için gerekli hizmeti sağlamaktadır.</p>
+
+                            <h3>Aile Hukuku Alanında Hizmet Sağladığımız Vekillik Hizmetlerinden Bazıları</h3>
+                            <p><strong>Atik Hukuk Bürosu</strong> kurucusu <strong>Avukat Yetkin Atik</strong> başta olmak üzere büromuza bağlı hizmet sağlayan avukat ve danışmanlarımızdan Ankara bölgesi öncelikli olmak üzere alabileceğiniz bazı Aile Hukuku hizmet alanları;</p>
+                            <ol>
+                                <li style="font-family: 'Helvetica';">Boşanma Davaları</li>
+                                <li style="font-family: 'Helvetica';">Velayet Davaları</li>
+                                <li style="font-family: 'Helvetica';">Aile İçi Şiddet Davaları</li>
+                                <li style="font-family: 'Helvetica';">Babalık Davası</li>
+                                <li style="font-family: 'Helvetica';">Evlat Edinme Davası</li>
+                                <li style="font-family: 'Helvetica';">Tenfis Davası</li>
+                                <li style="font-family: 'Helvetica';">Vesayet ve Kayyım Davaları</li>
+                                <li style="font-family: 'Helvetica';">Nafaka ve Tazminat Davaları</li>
+                                <li style="font-family: 'Helvetica';">Mal Rejimi Davaları</li>
+                                <li style="font-family: 'Helvetica';">Miras ve Mirasçılık Davaları</li>
+
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-md-pull-8">
+                        <div class="service-sidebar">
+                            <div class="widget service-list-widget">
+                                <h3>Uzmanlık Alanları</h3>
+                                <ul>
+                                    <li><a href="{% url 'ishukuku' %}">İş ve Sosyal Güvenlik Hukuku</a></li>
+                                    <li><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></li>
+                                    <li><a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></li>
+                                    <li  class="current"><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+                                    <li><a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></li>
+                                    <li><a href="{% url 'icrahukuku' %}">İcra ve İflas Hukuku</a></li>
+                                    <li><a href="{% url 'sigortahukuku' %}">Sigorta Hukuku</a></li>
+                                    <li><a href="{% url 'sozlesmelerhukuku' %}">Sözleşmeler Hukuku</a></li>
+                                    <li><a href="{% url 'saglikhukuku' %}">Sağlık Hukuku</a></li>
+                                </ul>
+                            </div>
+                            <div class="widget service-list-widget">
+                                <h3>Son Hukuki Yayınlarımız</h3>
+                                <ul>
+                                    {% for makale in besmakale %}
+                                    <li><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end service-single-section -->
+
+
+{% endblock %}

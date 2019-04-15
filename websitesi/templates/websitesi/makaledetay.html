@@ -1,0 +1,144 @@
+{% extends 'websitesi/components/layout.html' %}
+{% load static %}
+
+{% block titleMeta %}
+
+    <title>Atik Hukuk - {{ makale.makale_baslik }}</title>
+    <meta name="description" content="{{ makale.makale_meta_description }}">
+
+        <meta property="og:title" content="{{ makale.makale_baslik }}" />
+        <meta property="og.image" content="https://www.atiklaw.com{% static 'websitesi/images/atik-hukuk-makale.png' %}">
+        <meta property="og:type" content="article" />
+        <meta property="article:author" content="{% url 'hakkimizda' %}" />
+        <meta property='article:publisher' content="{% url 'makaledetay' makaleslug=makale.makale_slug %}" />
+        <meta property='og:site_name' content='Atik Hukuk | Danışmanlık' />
+
+{% endblock %}
+
+
+{% block body %}
+
+
+            <!-- start page-title -->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="title">
+                            <h2>{{ makale.makale_baslik }}</h2>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'anasayfa' %}">Ana Sayfa</a></li>
+                    <li><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></li>
+                </ol>
+            </div> <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start blog-single-section -->
+        <section class="blog-single-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-8">
+                        <div class="blog-content">
+                            <div class="post">
+                                <div class="entry-media">
+                                    <img src="{% static 'websitesi/images/atik-hukuk-makale.png' %}" alt="Atik Hukuk Hukuki Yayınlar">
+                                </div>
+                                <h2>{{ makale.makale_baslik }}</h2>
+                                <ul class="meta">
+                                    <li>Av. <a href="{% url 'hakkimizda' %}">Yetkin Atik</a></li>
+                                    <li>19 Temmuz 2018</li>
+
+                                </ul>
+                                <div class="entry-details">
+                                    {{ makale.makale_mesaj|safe }}
+                                </div>
+                            </div>
+
+                            <div class="tag-share">
+                                <div class="tag">
+                                    <i class="fa fa-hashtag"></i>
+                                    <ul>
+                                        {% for i in makale.tag.all %}
+                                        <li>{{ i }}</li>
+                                        {% endfor %}
+
+                                    </ul>
+                                </div>
+
+                            </div> <!-- end tag-share -->
+
+                            <div class="author-box">
+                                <div class="author-avatar">
+                                    <a href="{% url 'hakkimizda' %}"><img src="{% static 'websitesi/images/yetkin-atik-bio-resim.png' %}" alt="Avukat Yetkin Atik Resmi"></a>
+                                </div>
+                                <div class="author-content">
+                                    <a href="{% url 'hakkimizda' %}" class="author-name">Av. Yetkin Atik</a>
+                                    <p>Av. Yetkin Atik, Lise eğitimini Ankara Doğa Kolejinde tamamlamış ve daha sonrasında Altınbaş Üniversitesi Hukuk Fakültesi’nden 2017 yılında mezun olmuştur.</p>
+                                    <div class="socials">
+                                        <ul class="social-lnk">
+                                            <li><a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                            <li><a href="#"><i aria-hidden="true" class="fa fa-pinterest-p"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> <!-- end author-box -->
+
+                            <div class="more-posts">
+                                <div class="previous-post">
+                                    <a href="{% url 'makaledetay' makaleslug=oncekimakale.makale_slug %}">
+                                        <span class="post-control-link">Önceki Makale</span>
+                                        <span class="post-name">{{ oncekimakale.makale_baslik }}</span>
+                                    </a>
+                                </div>
+                                <div class="next-post">
+                                    <a href="{% url 'makaledetay' makaleslug=sonrakimakale.makale_slug %}">
+                                        <span class="post-control-link">Sonraki Makale</span>
+                                        <span class="post-name">{{ sonrakimakale.makale_baslik }}s</span>
+                                    </a>
+                                </div>
+                            </div> <!-- end more-posts -->
+
+
+                        </div>
+                    </div>
+                    <div class="col col-md-4">
+                        <div class="blog-sidebar">
+
+
+                            <div class="widget recent-post-widget">
+                                <h3>Son Hukuki Yayınlar</h3>
+                                <div class="posts">
+
+                                    {% for makale in ucmakale %}
+                                    <div class="post">
+                                        <div class="img-holder">
+                                            <img src="{% static 'websitesi/images/Atik-Hukuk-Logo-Kucuk.png' %}" alt="Atik Hukuk Logo Kucuk">
+                                        </div>
+                                        <div class="details">
+                                            <h4><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></h4>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end blog-single-section -->
+
+
+
+
+{% endblock %}

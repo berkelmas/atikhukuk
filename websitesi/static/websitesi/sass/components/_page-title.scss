@@ -1,0 +1,85 @@
+.page-title {
+	@include background-style("../images/page-title.jpg", center center, cover, no-repeat, local);
+	height: 400px;
+	text-align: center;
+	position: relative;
+	display: table;
+	width: 100%;
+
+	@include media-query(991px) {
+		height: 350px;
+	}
+
+	@include media-query(767px) {
+		height: 300px;
+	}
+
+	&:before {
+		content: "";
+		@include overlay(rgba(25,25,25,0.7));
+	}
+
+	.container {
+		width: 100%;
+		vertical-align: middle;
+		display: table-cell;
+	}
+
+	h2,
+	ol {
+		color: $white;
+	}
+
+	h2 {
+		font-size: 60px;
+		font-size: calc-rem-value(60);
+		margin: 0;
+		text-transform: capitalize;
+
+		@include media-query(991px) {
+			font-size: 45px;
+			font-size: calc-rem-value(45);
+		}
+
+		@include media-query(767px) {
+			font-size: 40px;
+			font-size: calc-rem-value(40);
+		}
+	}
+
+	.breadcrumb {
+		background-color: transparentize($white, 0.9);
+		padding: 10px 22px;
+		margin: 0;
+		border-radius: 0;
+		position: absolute;
+		left: 50%;
+		@include translatingX();
+		bottom: 0;
+
+		@include media-query(767px) {
+			width: 100%;
+			padding: 8px 15px;
+		}
+
+		li {
+			color: #c5c5c5;
+
+			@include media-query(767px) {
+				font-size: 14px;
+				font-size: calc-rem-value(14);
+			}
+		}
+
+		a {
+			color: $theme-primary-color;
+		}
+
+		& > li + li:before {
+		    font-family: "FontAwesome";
+		    content: "\f105";
+		    color: #c5c5c5;
+		    margin: 0 5px;
+		}
+	}
+}

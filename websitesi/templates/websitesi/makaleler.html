@@ -1,0 +1,149 @@
+{% extends 'websitesi/components/layout.html' %}
+{% load static %}
+
+{% block titleMeta %}
+
+    <title>Atik Hukuk & Danışmanlık - Hakkımızda</title>
+    <meta name="description" content="Avukat Yetkin Atik ve Atik Hukuk Bürosu ekibi tarafından kaleme alınan hukuki yayınlardır.">
+{% endblock %}
+
+{% block body %}
+
+
+            <!-- start page-title -->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="title">
+                            <h2>Hukuki Yayınlar</h2>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'anasayfa' %}">Ana Sayfa</a></li>
+                    <li><a href="{% url 'makaleler' %}">Hukuki Yayınlar</a></li>
+                </ol>
+            </div> <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start blog-pg-section -->
+        <section class="blog-pg-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-8">
+                        <div class="blog-content">
+
+                            {% for makale in articles %}
+                            <div class="post">
+                                <div class="entry-media">
+                                    <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}"><img src="{% static 'websitesi/images/atik-hukuk-makale.png' %}" alt="Atik Hukuk Hukuki Makaleleri"></a>
+                                </div>
+                                <h3><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></h3>
+                                <ul class="meta">
+                                    <li>Av. <a href="{% url 'hakkimizda' %}">Yetkin Atik</a></li>
+                                    <li>{{ makale.makale_yayintarihi }}</li>
+
+                                </ul>
+                                <div class="entry-details">
+                                    {{ makale.makale_mesaj|safe|truncatewords:"50"|linebreaks }}
+                                    <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}" class="read-more">Daha Fazlası -</a>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+
+                            <div class="pagination-wrapper pagination-wrapper-left">
+                                <ul class="pg-pagination">
+
+                                    {% if articles.has_previous %}
+                                        <li>
+                                            <a href="?page={{ articles.previous_page_number }}" aria-label="Previous">
+                                                <i class="fa fa-angle-double-left"></i>
+                                            </a>
+                                        </li>
+                                    {% endif %}
+
+                        {% for i in articles.paginator.page_range %}
+
+                            {% if forloop.counter < 5 %}
+
+                                    <li class="{% if i == articles.number %}active{% endif %}"><a href="?page={{forloop.counter}}">1</a></li>
+                            {% endif %}
+
+                        {% endfor %}
+
+                                {% if articles.has_next %}
+                                    <li>
+                                        <a href="?page={{ articles.paginator.num_pages }}" aria-label="Next">
+                                            <i class="fa fa-angle-double-right"></i>
+                                        </a>
+                                    </li>
+                                {% endif %}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-4">
+                        <div class="blog-sidebar">
+
+
+                            <div class="widget recent-post-widget">
+                                <h3>Son Hukuki Yayınlar</h3>
+                                <div class="posts">
+
+                                    {% for makale in ucmakale %}
+                                    <div class="post">
+                                        <div class="img-holder">
+                                            <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}"><img src="{% static 'websitesi/images/Atik-Hukuk-Logo-Kucuk.png' %}" alt="Atik Hukuk Logo Kucuk"></a>
+                                        </div>
+                                        <div class="details">
+                                            <h4><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></h4>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                            </div>
+                            <div class="widget category-widget">
+                                <h3>Kategoriler</h3>
+                                <ul>
+                                    <li><a href="?hukuki-alan=ishukuku">İş Hukuku</a></li>
+                                    <li><a href="?hukuki-alan=ailehukuku">Aile Hukuku</a></li>
+                                    <li><a href="?hukuki-alan=ticarethukuku">Ticaret Hukuku</a></li>
+                                    <li><a href="?hukuki-alan=sigortahukuku">Sigorta Hukuku</a></li>
+                                    <li><a href="?hukuki-alan=gayrimenkulhukuku">Gayrimenkul Hukuku</a></li>
+                                    <li><a href="?hukuki-alan=sozlesmelerhukuku">Sözleşmeler Hukuku</a></li>
+                                    <li><a href="?hukuki-alan=cezahukuku">Ceza Hukuku</a></li>
+                                    <li><a href="?hukuki-alan=icrahukuku">İcra Hukuku</a></li>
+                                    <li><a href="?hukuki-alan=saglikhukuku">Sağlık Hukuku</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="widget search-widget">
+                                <h3>Ara</h3>
+                                <form>
+                                    <div>
+                                        <input type="text" class="form-control" name="makale-ara" placeholder="Hukuki Yayın Ara...">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end blog-pg-section -->
+
+    <script>
+
+    </script>
+
+
+
+{% endblock %}

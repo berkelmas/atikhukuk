@@ -1,0 +1,241 @@
+
+
+{% extends 'websitesi/components/layout.html' %}
+{% load static %}
+
+    {% block titleMeta %}
+        <title>Atik Hukuk & Danışmanlık</title>
+        <meta name="description" content="Avukat Yetkin Atik tarafından Ankara merkezli olarak kurulan Atik Hukuk ve Danışmanlık bürosunun tanıtıcı internet sitesidir.">
+    {% endblock %}
+
+{% block body %}
+
+
+
+        <!-- start of hero -->
+        <section class="hero hero-slider-wrapper hero-style-1">
+            <div class="hero-slider">
+                <div class="slide">
+                    <img src="{% static 'websitesi/images/slider/atik-hukuk-slayt.png' %}" alt="Atik Hukuk Slayt 1" class="slider-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-lg-7 slide-caption">
+                                <p>Hukuktaki Yardımcınız</p>
+                                <h2><span>Etkili & Güçlü</span> <span>Hukuki Çözüm Anlayışı</span></h2>
+                                <div class="btns">
+                                    <a href="{% url 'hakkimizda' %}" class="theme-btn-s2"> Avukat Yetkin Atik Kimdir? </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="{% static 'websitesi/images/slider/atik-hukuk-slayt-2.png' %}" alt="Atik Hukuk Slayt 2" class="slider-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-lg-7 slide-caption">
+                                <p>Atik Hukuk Bürosu</p>
+                                <h2><span>Avukat Yetkin Atik Hukuki Sorunlarınız için yanınızda </span></h2>
+                                <div class="btns">
+                                    <a href="{% url 'uzmanliklar' %}" class="theme-btn-s2"> Uzmanlık Alanlarımız </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of hero slider -->
+
+
+        <!-- start about-section -->
+        <section class="about-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-5">
+                        <div class="about-title">
+                            <div class="img-holder">
+                                <img src="{% static 'websitesi/images/atik-hukuk-danismanlik2.png' %}" alt="Atik Hukuk Bürosu - Ankara">
+                            </div>
+                            <div class="title-text">
+                                <h2>Hukuk & <br> Danışmanlık</h2>
+                                <p>Müvekkillerimize En İyisi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col-md-7">
+                        <div class="about-text">
+                            <h4>Atik Hukuk & Danışmanlık ile Hukuki Süreçlerinizde Çözüm Ortağı Olmaktan Gurur Duyuyoruz</h4>
+                            <p>ATİK Hukuk Bürosu olarak insanlık tarihi kadar eski bir geçmişe sahip olan “Hukuk” kavramının her alanda üstünlüğünü savunarak ülkemizin en saygın ve başarılı hukuk bürolarından birisi olma hedefiyle yola çıktık. Gerek şahıslar gerekse kurumlar başta olmak üzere hukuki konularda yaşanan sorunları çözmek ve danışmanlık hizmeti çerçevesinde deneyimli kadromuzla hizmet vermeyi hedeflemekteyiz.</p>
+                            <p>Avukat Yetkin Atik tarafından Ankara'da kurulan Atik Hukuk & Danışmanlık hizmetleri hukukun üstünlüğü, etik ve adalet ilkeleri ile faaliyetlerini sürdürmektedir.</p>
+                            <a href="{% url 'hakkimizda' %}" class="theme-btn-s2">Daha Fazlası</a>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+        <!-- end about-section -->
+
+
+        <!-- start services-section -->
+        <section class="services-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="section-title">
+                            <span>Hukukta Uzman</span>
+                            <h2>Uzmanlık Alanlarımız</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="service-grids service-slider">
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-thief-2"></i>
+                                </div>
+                                <h4><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></h4>
+                                <p>Atik Hukuk, Ceza Hukuku konusunda tecrübeli kadrosuyla Ankara bölgesi başta olmak üzere tüm Türkiye’ye hizmet vermektedir.</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-parents"></i>
+                                </div>
+                                <h4><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></h4>
+                                <p>Atik Hukuk, Aile Hukuku konusunda türlü hukuki uyuşmazlıklarda -boşanma, nafaka vs.- müvekkillerini temsil etmektedir.</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-wounded"></i>
+                                </div>
+                                <h4><a href="{% url 'sigortahukuku' %}">Sigorta Hukuku</a></h4>
+                                <p>Atik Hukuk Bürosu olarak Sigorta Hukuku konusunda faaliyetlerin sürdürülebilmesi için hukuk hizmeti de sunmaktayız.</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-thief-1"></i>
+                                </div>
+                                <h4><a href="{% url 'icrahukuku' %}">İcra ve İflas Hukuku</a></h4>
+                                <p>Atik Hukuk Bürosu olarak icra ve iflas hukuku alanında tecrübeli kadromuz ile hukuki danışmanlık hizmeti vermekteyiz.</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-briefcase"></i>
+                                </div>
+                                <h4><a href="{% url 'ishukuku' %}">İş Hukuku</a></h4>
+                                <p>Atik Hukuk Bürosu, işçi ve işverenlerin haklarını koruyabilmek için tecrübeli Yetkin Atik gibi avukatları bünyesinde barındırmaktadır.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end services-section -->
+
+
+
+
+
+       <!--  start recent-blog-section -->
+       <section class="recent-blog-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="section-title-s2">
+                            <span>makaleler</span>
+                            <h2>Hukuki Yayınlarımız </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="blog-grids clearfix">
+
+                        {% for makale in ucmakale %}
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="{% static 'websitesi/images/atik-hukuk-makaleler-index.png' %}" alt="Atik Hukuktan Yayınlar">
+                                </div>
+                                <div class="date">
+                                    <p>{{ makale.makale_yayintarihi }}</p>
+                                </div>
+                                <div class="details">
+                                    <h3><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></h3>
+                                    <div class="meta">
+                                        <ul>
+                                            <li>-Av &nbsp;<a href="{% url 'hakkimizda' %}">Yetkin Atik</a></li>
+                                            <li>{{ makale.get_makale_kategori_display }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+       </section>
+       <!-- end recent-blog-section -->
+
+
+
+        <!-- start cta-section -->
+        <section class="cta-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-8">
+                        <div class="cta-text">
+                            <h2>Atik Hukuk Uzman Kadrosu ile Hukuki Uyuşmazlıklarınızda Yanınızda</h2>
+                            <p>Avukat Yetkin Atik tarafından Ankara'da kurulan Atik Hukuk & Danışmanlık; her türlü avukatlık hizmetleriniz için yanınızda.</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <p><a style="color: inherit; text-decoration: none" href="tel:+903123416000">0 (312) 341 60 00</a></p>
+                        <p><a style="color: inherit; text-decoration: none" href="mailto:info@atikhukuk.com">info@atikhukuk.com</a></p>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end cta-section -->
+
+
+
+
+        <!-- start partners-section -->
+        <section class="partners-section">
+            <h2 class="hidden">Referanslarımız</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="partner-grids partners-slider">
+                            <div>
+                                <img src="{% static 'websitesi/images/atk-petrol-muvekkil.png' %}" alt="ATK Petrol Logo">
+                            </div>
+                            <div>
+                                <img src="{% static 'websitesi/images/ankara-princess-otel-muvekkil.png' %}" alt="Ankara Princess Otel Logo">
+                            </div>
+                            <div>
+                                <img src="{% static 'websitesi/images/fsm-turizm-muvekkil.png' %}" alt="FSM Turizm Logo">
+                            </div>
+                            <div>
+                                <img src="{% static 'websitesi/images/haskaya-referans-muvekkil.png' %}" alt="Haskaya Logo">
+                            </div>
+                            <div>
+                                <img src="{% static 'websitesi/images/ibrahim-kaya-sirketleri-muvekkil.png' %}" alt="İbrahim Kaya Şirketler Grubu Logo">
+                            </div>
+                            <div>
+                                <img src="{% static 'websitesi/images/santral-otel-muvekkil.png' %}" alt="Santral Otel Logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end partners-section -->
+
+
+{% endblock %}

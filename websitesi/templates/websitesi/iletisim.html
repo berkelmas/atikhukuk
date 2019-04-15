@@ -1,0 +1,112 @@
+{% extends 'websitesi/components/layout.html' %}
+{% load static %}
+
+{% block titleMeta %}
+
+    <title>Atik Hukuk & Danışmanlık - Hakkımızda</title>
+    <meta name="description" content="Avukat Yetkin Atik'e buradan ulaşabilirsiniz.">
+{% endblock %}
+
+{% block body %}
+
+
+            <!-- start page-title -->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="title">
+                            <h2>Bize Ulaşın</h2>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'anasayfa' %}">Ana Sayfa</a></li>
+                    <li><a href="{% url 'iletisim' %}">İletişim</a></li>
+                </ol>
+            </div> <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start contact-pg-section -->
+        <section class="contact-pg-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="section-title-s2">
+                            <span>İletişim</span>
+                            <h2>Bize Ulaşın</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <div class="contact-form">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="half-col">
+                                    <input type="text" name="isim" id="name" class="form-control" placeholder="Adınız" required>
+                                </div>
+                                <div class="half-col">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Email Adresiniz">
+                                </div>
+                                <div>
+                                    <input type="text" name="telefon" id="phone" class="form-control" placeholder="Telefon Numaranız" required>
+                                </div>
+                                <div>
+                                    <textarea class="form-control" name="mesaj"  id="note" placeholder="Mesajınız..."></textarea>
+                                </div>
+                                <div class="submit-btn-wrapper">
+                                    <button type="submit" class="theme-btn-s3">Gönder</button>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col col-lg-6">
+                        <div class="info-box-outer">
+                            <div class="info-box">
+                                <div class="grid">
+                                    <h3>Adres</h3>
+                                    <p>Zübeyde Hanım Mahallesi, İstanbul Caddesi, No: 92, Altındağ/Ankara</p>
+                                </div>
+                                <div class="grid">
+                                    <h3>Telefon</h3>
+                                    <p><a style="color: inherit; text-decoration: none" href="tel:+903123416000">0 (312) 341 60 00</a></p>
+                                </div>
+                                <div class="grid">
+                                    <h3>Email</h3>
+                                    <p><a style="color: inherit; text-decoration: none" href="mailto:info@atikhukuk.com">info@atikhukuk.com</a></p>
+                                </div>
+                                <div class="grid">
+                                    <ul class="social">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6117.612757190231!2d32.845254898071275!3d39.945720444591984!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34ffea922f1fb%3A0x11c021e3930622ea!2zQVTEsEsgSHVrdWsgJiBEYW7EscWfbWFubMSxaw!5e0!3m2!1sen!2str!4v1555332207998!5m2!1sen!2str" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end contact-pg-section -->
+
+
+
+
+{% endblock %}

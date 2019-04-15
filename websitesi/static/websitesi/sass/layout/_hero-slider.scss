@@ -1,0 +1,285 @@
+/*--------------------------------------------------------------
+#0.4	hero slider
+--------------------------------------------------------------*/
+.hero {
+	position: relative;
+	height: 700px;
+	overflow: hidden;
+
+	@include media-query(991px) {
+		height: 600px;
+	}
+
+	@include media-query(767px) {
+		height: 450px;
+	}
+
+	.slide {
+		height: 700px;
+		position: relative;
+
+		@include media-query(991px) {
+			height: 600px;
+		}
+
+		@include media-query(767px) {
+			height: 450px;
+		}
+
+		background-repeat: no-repeat;
+		position: relative;
+
+		.slider-bg {
+			display: none;
+		}
+	}
+
+	.slide:focus {
+		outline: none;
+	}
+
+	.slide .container {
+		height: 100%;
+		display: table;
+		padding: 0;
+	}
+
+	.slide .row {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+
+	/** slider controls **/
+	.slick-prev,
+	.slick-next {
+		//background-color: $theme-primary-color;
+		width: 55px;
+		height: 55px;
+		border: 2px solid #bfbfbf;
+		border-radius: 50%;
+		z-index: 10;
+
+		@include media-query(991px) {
+			display: none !important;
+		}
+	}
+
+	.slick-prev {
+		left: 25px;
+
+		&:before {
+			font-family: "FontAwesome";
+			content: "\f104";
+			opacity: 1;
+			color: #bfbfbf;
+		}
+	}
+
+	.slick-next {
+		right: 25px;
+
+		&:before {
+			font-family: "FontAwesome";
+			content: "\f105";
+			opacity: 1;
+			color: #bfbfbf;
+		}
+	}
+
+	.slick-prev:hover,
+	.slick-next:hover {
+		background: $theme-primary-color;
+		border-color: $theme-primary-color;
+
+		&:before {
+			color: $white;
+		}
+	}
+
+
+	.slick-dots {
+		bottom: 30px;
+
+		@include widther(992px) {
+			display: none !important;
+		}
+
+		li {
+			margin: 0;
+		}
+
+		button {
+			background-color: $theme-primary-color;
+			width: 14px;
+		    height: 14px;
+		    border: 1px solid $white;
+			border-radius: 50%;
+		}
+
+		button:before,
+		button:before {
+			display: none;
+		}
+	}
+
+
+	/*** hero slider animation ***/
+	.hero-slider .slide-caption > h2,
+	.hero-slider .slide-caption > p,
+	.hero-slider .slide-caption > .btns {
+		opacity: 0;
+	}
+
+	.hero-slider .slick-list .slick-current .slide-caption > p {
+		-webkit-animation: fadeInTopSlow 1.5s 0.8s forwards;
+		-moz-animation: fadeInTopSlow 1.5s 0.8s forwards;
+		-o-animation: fadeInTopSlow 1.5s 0.8s forwards;
+		-ms-animation: fadeInTopSlow 1.5s 0.8s forwards;
+		animation: fadeInTopSlow 1.5s 0.8s forwards;
+	}
+
+	.hero-slider .slick-list .slick-current .slide-caption > h2 {
+		-webkit-animation: fadeInLeftSlow 1.5s 0.8s forwards;
+		-moz-animation: fadeInLeftSlow 1.5s 0.8s forwards;
+		-o-animation: fadeInLeftSlow 1.5s 0.8s forwards;
+		-ms-animation: fadeInLeftSlow 1.5s 0.8s forwards;
+		animation: fadeInLeftSlow 1.5s 0.8s forwards;
+	}
+
+	.hero-slider .slick-list .slick-current .slide-caption > .btns {
+		-webkit-animation: fadeInBottomSlow 1.5s 0.8s forwards;
+		-moz-animation: fadeInBottomSlow 1.5s 0.8s forwards;
+		-o-animation: fadeInBottomSlow 1.5s 0.8s forwards;
+		-ms-animation: fadeInBottomSlow 1.5s 0.8s forwards;
+		animation: fadeInBottomSlow 1.5s 0.8s forwards;
+	}
+}
+
+/******************************
+	hero style 1
+*******************************/
+.hero-style-1 {
+	.slide-caption p {
+		font-size: 20px;
+		font-size: calc-rem-value(20);
+		color: $white;
+		line-height: 0.8em;
+		font-weight: 300;
+		margin: 0;
+		position: relative;
+		padding-left: 100px;
+
+		@include media-query(991px) {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+			padding-left: 70px;
+		}
+
+		&:after {
+			content: "";
+			width: 70px;
+			height: 1px;
+			background: #e9e9e9;
+			position: absolute;
+			left: 0;
+			top: 54%;
+			@include media-query(991px) {
+				width: 50px;
+			}
+		}
+	}
+
+	.slide-caption h2 {
+		font-size: 55px;
+		font-size: calc-rem-value(55);
+		color: white;
+		margin: 0.9em 0 1em;
+
+		@include media-query(991px) {
+			font-size: 45px;
+			font-size: calc-rem-value(45);
+		}
+
+		@include media-query(767px) {
+			font-size: 35px;
+			font-size: calc-rem-value(35);
+		}
+
+		@include media-query(450px) {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+		}
+
+		span {
+			background: transparentize($theme-secondary-color, 0.7);
+			margin-bottom: 10px;
+			padding: 5px 20px 13px;
+			display: inline-block;
+
+			@include media-query(991px) {
+				padding: 4px 15px 12px;
+			}
+
+			@include media-query(450px) {
+				padding: 4px 10px 12px;
+			}
+		}
+	}
+}
+
+
+/******************************
+	hero style 2
+*******************************/
+.hero-style-2 {
+	@extend .hero-style-1;
+
+	height: 850px;
+
+	@include media-query(991px) {
+		height: 600px;
+	}
+
+	@include media-query(767px) {
+		height: 450px;
+	}
+
+	.slide {
+		height: 850px;
+
+		@include media-query(991px) {
+			height: 600px;
+		}
+
+		@include media-query(767px) {
+			height: 450px;
+		}
+	}
+
+	.slide-caption {
+		@include widther(992px) {
+			margin-top: 175px;
+		}
+	}
+
+
+	.slide-caption h2 {
+		margin: 0.6em 0 0.7em;
+		line-height: 1.3em;
+
+		span {
+			background: transparent;
+			padding: 0;
+			display: inline-block;
+			margin: 0;
+		}
+	}
+
+	@include widther(992px) {
+		.slick-prev,
+		.slick-next {
+			top: 60%;
+		}
+	}
+}

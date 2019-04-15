@@ -1,0 +1,26 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+// @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display');
+// @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:700');
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Playfair+Display');
+
+
+// fonts
+$base-font-size: 16;
+$base-font: 'Lato', sans-serif;
+$heading-font: 'Playfair Display', serif;
+
+
+// color
+$dark-blue: #282e3f;
+$white: #fff;
+$black: #000;
+
+$theme-primary-color: #c1b696;
+$theme-secondary-color: #282e3f;
+$body-bg-color: #f2f0f0;
+$section-bg-color: #f8f8f8;
+$text-color: #7d7d7d;
+$heading-color: $dark-blue;

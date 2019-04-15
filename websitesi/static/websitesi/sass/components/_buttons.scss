@@ -1,0 +1,61 @@
+.theme-btn {
+	background-color: $theme-primary-color;
+	font-size: 15px;
+	font-size: calc-rem-value(15);
+	font-weight: 700;
+	color: $white;
+	padding: 9px 25px;
+	border: 2px solid transparent;
+	border-radius: 47px;
+	text-transform: capitalize;
+	display: inline-block;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($theme-primary-color, 10%);
+		color: $white;
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		font-weight: 400;
+		padding: 7px 22px;
+	}
+
+	@include media-query(767px) {
+		// /padding: 5px 20px;
+	}
+}
+
+.theme-btn-s2 {
+	@extend .theme-btn;
+	padding: 11px 25px;
+
+	@include media-query(991px) {
+		padding: 9px 22px;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: transparentize($theme-primary-color, 0.4);
+		border-color: $theme-primary-color;
+	}
+}
+
+.theme-btn-s3 {
+	@extend .theme-btn-s2;
+	border-radius: 0;
+	text-transform: uppercase;
+}
+
+.theme-btn-s4 {
+	@extend .theme-btn-s2;
+
+
+	&:hover {
+		background-color: darken($theme-primary-color, 8%);
+	}
+}

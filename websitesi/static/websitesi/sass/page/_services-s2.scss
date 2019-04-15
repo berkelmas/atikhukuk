@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------
+	#services s2 page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#8.1	services-section-s3
+--------------------------------------------------------------*/
+.services-section-s3 {
+	@extend .services-section-s2;
+	background: $white;
+	padding-top: 117px;
+
+	@include media-query(991px) {
+		padding-top: 107px;
+	}
+
+	@include media-query(767px) {
+		padding-top: 97px;
+	}
+
+	.service-grids {
+		overflow: visible;
+	}
+
+	.service-grids .grid {
+		background-color: $white;
+		box-shadow: 0px 2px 32.68px 5.32px rgba(0, 0, 0, 0.05);
+	}
+
+	.grid h4 a {
+		color: $heading-color;
+	}
+
+	.grid p {
+		color: #616161;
+	}
+
+	.grid:hover h4 a,
+	.grid:hover p {
+		color: $white;
+	}
+}

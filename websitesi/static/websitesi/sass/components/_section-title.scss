@@ -1,0 +1,77 @@
+.section-title {
+	margin-bottom: 55px;
+
+	@include media-query(991px) {
+		margin-bottom: 45px;
+	}
+
+	> span {
+		font-size: 14px;
+		font-size: calc-rem-value(14);
+		color: $theme-primary-color;
+		margin-top: -5px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		display: block;
+
+		@include media-query(767px) {
+			font-size: 13px;
+			font-size: calc-rem-value(13);
+		}
+	}
+
+	h2 {
+		font-size: 45px;
+		font-size: calc-rem-value(45);
+		color: $white;
+		margin: 0.22em 0 0;
+		padding-right: 80px;
+		text-transform: capitalize;
+		display: inline-block;
+		position: relative;
+
+		@include media-query(991px) {
+			font-size: 38px;
+			font-size: calc-rem-value(38);
+			padding-right: 70px;
+		}
+
+		@include media-query(767px) {
+			font-size: 30px;
+			font-size: calc-rem-value(30);
+			padding-right: 60px;
+		}
+
+		&:after {
+			content: "";
+			background: $white;
+			width: 55px;
+			height: 2px;
+			position: absolute;
+			right: 0;
+			bottom: 6px;
+
+			@include media-query(991px) {
+				width: 45px;
+				height: 2px;
+			}
+
+			@include media-query(767px) {
+				width: 35px;
+			}
+		}
+	}
+}
+
+
+.section-title-s2 {
+	@extend .section-title;
+
+	h2 {
+		color: $heading-color;
+
+		&:after {
+			background: $heading-color;
+		}
+	}
+}

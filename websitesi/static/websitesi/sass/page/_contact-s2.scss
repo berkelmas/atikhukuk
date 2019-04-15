@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+	#contact s2 page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#5.1	contact-pg-section-s2
+--------------------------------------------------------------*/
+.contact-pg-section-s2 {
+	@extend .contact-pg-section;
+
+	.info-box-outer {
+		padding-left: 0;
+		margin-top: 55px;
+
+		@include media-query(991px) {
+			margin-top: 45px;
+		}
+
+		@include media-query(767px) {
+			margin-top: 55px;
+		}
+	}
+
+	.contact-map {
+		margin-top: 100px;
+
+		@include media-query(991px) {
+			margin-top: 90px;
+		}
+
+		@include media-query(767px) {
+			height: 350px;
+			margin-top: 80px;
+		}
+	}
+}

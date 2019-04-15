@@ -1,0 +1,117 @@
+{% extends 'websitesi/components/layout.html' %}
+{% load static %}
+
+{% block titleMeta %}
+
+    <title>Atik Hukuk - Uzmanlık Alanları</title>
+    <meta name="description" content="Ankara'da avukatlık hizmeti veren Atik Hukuk Bürosunun hukuki uzmanlıklarını belirten sayfadır.">
+{% endblock %}
+
+
+
+
+
+{% block body %}
+
+
+
+            <!-- start page-title -->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="title">
+                            <h2>Uzmanlık Alanlari</h2>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+                <ol class="breadcrumb">
+                    <li><a href="{% url 'anasayfa' %}">Ana Sayfa</a></li>
+                    <li><a href="{% url 'uzmanliklar' %}">Uzmanlık Alanları</a></li>
+                </ol>
+            </div> <!-- end container -->
+        </section>
+        <!-- end page-title -->
+
+
+        <!-- start services-section-s3 -->
+        <section class="services-section-s3 section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="service-grids clearfix">
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-thief-2"></i>
+                                </div>
+                                <h4><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></h4>
+                                <p>Atik Hukuk Bürosu Ceza Hukuku Alanında Uzman Ekibiyle Yanınızda</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-parents"></i>
+                                </div>
+                                <h4><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></h4>
+                                <p>Av. Yetkin Atik Aile Hukuku Alanında Uzman Olarak Hukuki Yardıma Hazır</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-wounded"></i>
+                                </div>
+                                <h4><a href="{% url 'saglikhukuku' %}">Sağlık Hukuku</a></h4>
+                                <p>Sağlık Hukuku Davalarınızda Atik Hukuk Bürosu'nun Uzman Ekibi Sizinle</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-thief-1"></i>
+                                </div>
+                                <h4><a href="{% url 'icrahukuku' %}">İcra ve İflas Hukuku</a></h4>
+                                <p>İcra Takibi ve uyuşmazlıklarınızda Atik Hukuk Ekibi Yanınızda</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-briefcase"></i>
+                                </div>
+                                <h4><a href="{% url 'ishukuku' %}">İş Hukuku</a></h4>
+                                <p>İşçi ve İşveren Tarafında Tüm Hukuki Uyuşmazlıklarınızda Yanınızdayız</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-laptop"></i>
+                                </div>
+                                <h4><a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></h4>
+                                <p>Her Türlü Ticari Davanızda Atik Hukuk Bürosu Ekibi Hizmet Vermeye Hazır</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-courthouse"></i>
+                                </div>
+                                <h4><a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></h4>
+                                <p>Tüm Eşya Hukukunu İlgilendiren Sorunlarınızda Atik Hukuk Hazır</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-diploma"></i>
+                                </div>
+                                <h4><a href="{% url 'sozlesmelerhukuku' %}">Sözleşmeler Hukuku</a></h4>
+                                <p>Ticari ve Ticari Olmayan Sözleşme Hazırlanması ve Uyuşmazlıklarınızda</p>
+                            </div>
+                            <div class="grid">
+                                <div class="icon">
+                                    <i class="fi flaticon-auction"></i>
+                                </div>
+                                <h4><a href="{% url 'sigortahukuku' %}">Sigorta Hukuku</a></h4>
+                                <p>Sigorta Kaynaklı Tüm Dava ve hukuki Uyuşmazlıklarınızda Atik Hukuk Hazır</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end services-section-s3 -->
+
+
+
+
+
+{% endblock %}

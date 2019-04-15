@@ -1,0 +1,100 @@
+/******************************
+	service sidebar
+*********************************/
+.service-sidebar {
+	@include widther(1200px) {
+		padding-right: 45px;
+	}
+
+	@include media-query(991px) {
+		margin-top: 80px;
+	}
+
+	.widget {
+		background-color: #f8f8f8;
+		padding: 40px 35px;
+
+		@include media-query(767px) {
+			padding: 35px 30px;
+		}
+
+		h3 {
+			font-size: 25px;
+			font-size: calc-rem-value(25);
+			margin: 0 0 0.9em;
+		}
+
+		ul,
+		p {
+			font-size: 18px;
+			font-size: calc-rem-value(18);
+
+			@include media-query(767px) {
+				font-size: 17px;
+				font-size: calc-rem-value(17);
+			}
+		}
+	}
+
+	> .widget + .widget {
+		margin-top: 40px;
+	}
+
+	.widget ul li a {
+		color: #676767;
+		font-weight: normal;
+	}
+
+	/*** service list widget ***/
+	.service-list-widget {
+		ul li {
+			border-bottom: 1px solid #e4e4e4;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+		}
+
+		ul li a {
+			display: block;
+		}
+
+		ul > li:last-child {
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border-bottom: 0;
+		}
+
+		.current a,
+		ul li a:hover {
+			color: $theme-primary-color;
+		}
+	}
+
+	/*** contact widget ***/
+	.contact-widget {
+		background-color: lighten($theme-primary-color, 20%);
+
+		ul li {
+			position: relative;
+			padding-left: 30px;
+			line-height: 1.6em;
+			color: #616161;
+
+			i {
+				position: absolute;
+				left: 0;
+				top: 7px;
+			}
+		}
+
+		ul > li + li {
+			margin-top: 20px;
+		}
+	}
+
+
+
+
+
+
+
+}
