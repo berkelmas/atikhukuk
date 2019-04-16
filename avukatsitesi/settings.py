@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*$afhn1&y_47y^)%u)p8zv0+2lb4zhgc&u*2ux^2+k(cp#ym&!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['134.209.255.218', 'atiklaw.com', 'www.atiklaw.com']
 
