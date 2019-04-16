@@ -4,6 +4,8 @@ from .views import anasayfa, hakkimizda, uzmanliklar, ishukuku, ailehukuku, \
     icrahukuku, saglikhukuku, sigortahukuku, makaleler, makaledetay, \
     iletisim
 
+from django.views.generic import TemplateView
+
 urlpatterns = [
     path('', anasayfa, name="anasayfa"),
     path('hakkimizda/', hakkimizda, name="hakkimizda"),
@@ -19,6 +21,8 @@ urlpatterns = [
     path('sigorta-hukuku/', sigortahukuku, name="sigortahukuku"),
     path('hukuki-yayinlar/', makaleler, name="makaleler"),
     path('bize-ulasin/', iletisim, name="iletisim"),
+    path('sitemap.xml/', TemplateView.as_view(template_name='websitesi/sitemap.xml', content_type='text/plain'), name="sitemap" ),
+    path('robots.txt/', TemplateView.as_view(template_name='websitesi/robots.txt', content_type='text/plain')),
 
     path('<slug:makaleslug>/', makaledetay, name="makaledetay"),  ## Bu regexden dolayı url'in karışmaması için en sona gelecek.
 ]
