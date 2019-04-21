@@ -8,6 +8,22 @@
     <meta name="description" content="Avukat Yetkin Atik tarafından kurulan Ankara'daki Atik Hukuk Bürosu hakkında tanıtıcı yazılardır.">
 {% endblock %}
 
+{% block styles %}
+
+    {{block.super}}
+    <style>
+
+    @media screen and (max-width: 450px) {
+    .mobileimage {
+            width: 350px;
+            height: 480px!important;
+        }
+    }
+
+    </style>
+
+{% endblock %}
+
 
 {% block body %}
 
@@ -141,7 +157,7 @@
                     <div class="col col-md-5">
                         <div class="about-title">
                             <div class="img-holder">
-                                <img style="height: 600px;" src="{% static 'websitesi/images/yetkin-atik.png' %}" alt="Avukat Yetkin Atik Kimdir">
+                                <img class="mobileimage" style="height: 600px;" src="{% static 'websitesi/images/yetkin-atik.png' %}" alt="Avukat Yetkin Atik Kimdir">
                             </div>
                         </div>
                     </div>
