@@ -68,10 +68,7 @@
 
                         {% for i in articles.paginator.page_range %}
 
-                            {% if forloop.counter < 5 %}
-
-                                    <li class="{% if i == articles.number %}active{% endif %}"><a href="?page={{forloop.counter}}">1</a></li>
-                            {% endif %}
+                            <li class="{% if i == articles.number %}active{% endif %}"><a href="?page={{i}}">{{i}}</a></li>
 
                         {% endfor %}
 

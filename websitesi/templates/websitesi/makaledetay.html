@@ -51,7 +51,7 @@
                                 <h2>{{ makale.makale_baslik }}</h2>
                                 <ul class="meta">
                                     <li>Av. <a href="{% url 'hakkimizda' %}">Yetkin Atik</a></li>
-                                    <li>19 Temmuz 2018</li>
+                                    <li>{{makale.makale_yayintarihi}}</li>
 
                                 </ul>
                                 <div class="entry-details">
@@ -81,10 +81,10 @@
                                     <p>Av. Yetkin Atik, Lise eğitimini Ankara Doğa Kolejinde tamamlamış ve daha sonrasında Altınbaş Üniversitesi Hukuk Fakültesi’nden 2017 yılında mezun olmuştur.</p>
                                     <div class="socials">
                                         <ul class="social-lnk">
-                                            <li><a href="#"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i aria-hidden="true" class="fa fa-pinterest-p"></i></a></li>
+                                            <li><a href="https://twitter.com/AtikHukuk"><i aria-hidden="true" class="fa fa-twitter"></i></a></li>
+                                            <li><a href="https://www.facebook.com/atik.hukuk/"><i aria-hidden="true" class="fa fa-facebook"></i></a></li>
+                                            <li><a href="https://www.instagram.com/atik.hukuk/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                            <li><a href="https://tr.linkedin.com/in/yetkin-atik-0a7496133"><i aria-hidden="true" class="fa fa-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -100,7 +100,7 @@
                                 <div class="next-post">
                                     <a href="{% url 'makaledetay' makaleslug=sonrakimakale.makale_slug %}">
                                         <span class="post-control-link">Sonraki Makale</span>
-                                        <span class="post-name">{{ sonrakimakale.makale_baslik }}s</span>
+                                        <span class="post-name">{{ sonrakimakale.makale_baslik }}</span>
                                     </a>
                                 </div>
                             </div> <!-- end more-posts -->
