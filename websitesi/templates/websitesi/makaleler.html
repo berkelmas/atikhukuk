@@ -48,7 +48,7 @@
 
                                 </ul>
                                 <div class="entry-details">
-                                    {{ makale.makale_mesaj|safe|truncatewords:"50"|linebreaks }}
+                                    {{ makale.makale_mesaj|safe|truncatechars_html:400|linebreaks }}
                                     <a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}" class="read-more">Daha Fazlası -</a>
                                 </div>
                             </div>
